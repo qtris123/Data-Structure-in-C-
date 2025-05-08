@@ -1,0 +1,29 @@
+This folder shows the construction and basic operations of the following data structures:
+1. Deque: 
+  functions: popFront, popBack, peekFront, peekBack, isEmpty, increaseSize, decreaseSize
+  backbone: an array with dynamic head and tail pointer.
+2. Stack:
+  functions: push, pop, peek, isEmpty, getSize
+  backbone: build on deque
+3. Queue:
+  functions: enqueue, dequeue, peek, isEmpty, getSize
+  backbone: build on deque
+
+I only solved a real-life problem using these data structures for practicing purpose, under the file straws.{hpp, cpp}:
+  
+You are given n opaque straws, each containing a certain amount of colored sand. There are n different colors of sand, 
+and each straw may contain sand in multiple colors placed sequentially. The sand inside the straws maintains its order. 
+Sand with different color does not mix together. Initially, sand of the same color may be present in multiple straws 
+and/or in multiple non-adjacent locations within the same straw.
+  Each straw has two openings: a top and a bottom. The following operations can be performed on the straws:
+  • Observe the sand color at either opening of the straw.
+  • Pour out the sand from one opening of a straw until the straw becomes empty or the sand color at this opening changes, 
+then Pour it into another straw from either opening.
+
+Goal: Your goal is to do operations to the straws such that straw#i contains only sand of color#i (for all i = 1, 2, ..., n).
+The solution does not need to be optimal, such as using the minimum number of operations. However, it must achieve the goal 
+within a finite number of steps and avoid triggering a timeout.
+
+Implementation:
+  functions: insertSand, moveSand
+  backbone: deque
