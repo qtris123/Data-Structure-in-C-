@@ -1,0 +1,3 @@
+Red-Black tree's construction and basic operations:
+  functions: insert, remove, find, getRank, getRankRoot, getNodeByRank, transplant, leftRotate, rightRotate, removeFixup, insertFixup, updateSize, findNode
+  backbone: TreeNode class 
