@@ -1,0 +1,26 @@
+This folder has construction and basic operations of binary heap and hash table:
+1. binary_heap
+  functions: insert, extractRoot, peek, remove, getSize, moveUp, moveDown, swap
+  backbone: vector
+2. hash_table
+  functions: insert, remove, find, get_num_buckets
+  backbone: vector<list<pair<KT, VT>>> buckets
+
+Only include two real-life problems, leaderboard and player
+1. Player:
+  functions: submit, remove_last, get_highscore
+  goal:
+  You have to keep a player’s scores in a stack, and always keep the highscore up
+to date by using a max heap on the scores
+2. Leaderboard:
+  functions: submit, remove_last, get_nickname
+  goal: 
+  Your need to maintain each player’s score records and one highscore, as well as
+a global leaderboard that shows the top m players sorted by their highscores.
+You should maintain the players’ highscore in a max heap. To correctly
+match player nicknames with their corresponding highscores in the max heap, a
+hash table is needed. You should also maintain a sorted array showing the best
+n players and their highscores.
+One possible approach is to store players’ highscore in a max heap starting
+from the m+1th player onward, while maintaining the top m players’ highscores
+in the sorted array
